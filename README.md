@@ -74,32 +74,20 @@ LEGIVRA AI, mikro servis mantığıyla geliştirilen modüler, katmanlı (Layere
 
 ### Uçtan Uca Grafik Akışı
 
-```mermaid
-graph TD
-    A[Vatandaş / Kurum Evrakı] --> B[Privacy Gateway]
-    B --> C[Router - Orchestrator Agent]
-    
-    C --> D[OCR Agent]
-    D --> E[Belge Sınıflandırma Agent]
-    E --> F[Eksik Bilgi Kontrol Agent]
-    F --> G[Risk & Öncelik Agent]
-    G --> H[Legal RAG Agent]
-    
-    H --> I[Karar Destek / Birim Yönlendirme Agent]
-    I --> J[Resmî Yazı Taslaklama Agent]
-    J --> K[Audit & Compliance Agent]
-    
-    K --> L[İnsan Onayı Human-in-the-Loop]
-    L --> M[EBYS Entegrasyon Agent]
-    M --> N[Arşiv & Analitik Agent]
-    N --> O([Bitiş])
-    
-    style A fill:#f9f9f9,stroke:#333,stroke-width:2px
-    style C fill:#e1f5fe,stroke:#0288d1,stroke-width:2px
-    style K fill:#fff3e0,stroke:#f57c00,stroke-width:2px
-    style L fill:#e8f5e9,stroke:#388e3c,stroke-width:2px
-    style O fill:#eceff1,stroke:#607d8b,stroke-width:2px
-
+```text
+[Vatandaş / Kurum Evrakı] ➔ [Privacy Gateway] ➔ [Router - Orchestrator Agent]
+                                                         │
+  ┌──────────────────────────────────────────────────────┴──────────────────────────────────────────────────────┐
+  ▼                                                      ▼                                                              ▼
+[OCR Agent] ➔ [Belge Sınıflandırma Agent] ➔ [Eksik Bilgi Kontrol Agent] ➔ [Risk & Öncelik Agent] ➔ [Legal RAG Agent]
+                                                                                                                │
+  ┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+  ▼
+[Karar Destek / Birim Yönlendirme Agent] ➔ [Resmî Yazı Taslaklama Agent] ➔ [Audit & Compliance Agent]
+                                                                                   │
+  ┌────────────────────────────────────────────────────────────────────────────────┘
+  ▼
+[İnsan Onayı (Human-in-the-Loop)] ➔ [EBYS Entegrasyon Agent] ➔ [Arşiv & Analitik Agent] ➔ [Bitiş]
 
 ### Öne Çıkan Ajanlar ve Görevleri:
 1. **Gizlilik Katmanı (Privacy Gateway):** T.C. kimlik numarası, telefon, adres, e-posta ve vergi numarası gibi kişisel verileri analiz aşamasına aktarılmadan önce 6698 sayılı KVKK ilkelerine uygun olarak otomatik maskeler (Örn: `TR*********`).
