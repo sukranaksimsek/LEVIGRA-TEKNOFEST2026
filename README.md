@@ -25,6 +25,8 @@ LEGIVRA AI fikri, TEKNOFEST'in belirlediği *"Kamu Evrak ve Yazışma Süreçler
 #### 👁️ Tuğba Nur Başkaya (Ekip Üyesi)
 **Projedeki Görevi:** **OCR** entegrasyonu, belge işleme, belge sınıflandırma ve eksik bilgi/belge tespit ajanlarının geliştirilmesi.
 
+---
+
 ## 🎯 Projenin Amacı ve Hedefleri
 
 LEGIVRA AI'ın temel amacı, kamu kurumlarında yürütülen evrak işleme süreçlerini tamamen otomatik hale getirmek değil; yapay zekâyı kamu personelinin yerine karar veren bir sistem olarak değil, personele karar desteği sunan güvenilir bir **dijital çalışma arkadaşı** olarak konumlandırmaktır.
@@ -72,6 +74,10 @@ LEGIVRA AI, mikro servis mantığıyla geliştirilen modüler, katmanlı (Layere
 
 ---
 
+## 🤖 Çok Ajanlı (Multi-Agent) Yaklaşım ve İş Akışı
+
+Sistemin iş akışı LangGraph üzerinde durum tabanlı (state-based) bir yapı üzerine kurulmuştur. Her evrak için benzersiz bir `Workflow State` nesnesi oluşturulur ve tüm süreç boyunca güncellenir.
+
 ### Uçtan Uca Grafik Akışı
 
 ```text
@@ -88,11 +94,6 @@ LEGIVRA AI, mikro servis mantığıyla geliştirilen modüler, katmanlı (Layere
   ┌────────────────────────────────────────────────────────────────────────────────┘
   ▼
 [İnsan Onayı (Human-in-the-Loop)] ➔ [EBYS Entegrasyon Agent] ➔ [Arşiv & Analitik Agent] ➔ [Bitiş]
-
-### Öne Çıkan Ajanlar ve Görevleri:
-1. **Gizlilik Katmanı (Privacy Gateway):** T.C. kimlik numarası, telefon, adres, e-posta ve vergi numarası gibi kişisel verileri analiz aşamasına aktarılmadan önce 6698 sayılı KVKK ilkelerine uygun olarak otomatik maskeler (Örn: `TR*********`).
-2. **Yönlendirici Ajan (Router / Orchestrator Agent):** İş akışını başlatır, sistem durumunu izler, uygun ajanları dinamik geçişlerle tetikler ve hata durumunda alternatif akışları (karar ağacı mantığında) devreye alır. Doğrudan belge analizi yapmaz.
-3. **Denetim ve Mevzuat Uyum Ajanı (Audit & Compliance Agent):** Büyük dil modellerinin halüsinasyon riskine karşı ikinci bağımsız doğrulama katmanıdır. Resmî yazı EBYS'ye gönderilmeden önce mevzuat uygunluğunu, yazışma formatını, eksik bilgi varlığını ve yazı ile mevzuat arasındaki çelişkileri denetler.
 
 ### 📋 Workflow State Veri Yapısı
 Sistem, ajanlar arasında veri tutarlılığını ve hata toleransını sağlamak için şu alanları anlık izler:
