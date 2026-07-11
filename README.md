@@ -95,6 +95,11 @@ Sistemin iş akışı LangGraph üzerinde durum tabanlı (state-based) bir yapı
   ▼
 [İnsan Onayı (Human-in-the-Loop)] ➔ [EBYS Entegrasyon Agent] ➔ [Arşiv & Analitik Agent] ➔ [Bitiş]
 
+### Öne Çıkan Ajanlar ve Görevleri:
+1. **Gizlilik Katmanı (Privacy Gateway):** T.C. kimlik numarası, telefon, adres, e-posta ve vergi numarası gibi kişisel verileri analiz aşamasına aktarılmadan önce 6698 sayılı KVKK ilkelerine uygun olarak otomatik maskeler (Örn: `TR*********`).
+2. **Yönlendirici Ajan (Router / Orchestrator Agent):** İş akışını başlatır, sistem durumunu izler, uygun ajanları dinamik geçişlerle tetikler ve hata durumunda alternatif akışları (karar ağacı mantığında) devreye alır. Doğrudan belge analizi yapmaz.
+3. **Denetim ve Mevzuat Uyum Ajanı (Audit & Compliance Agent):** Büyük dil modellerinin halüsinasyon riskine karşı ikinci bağımsız doğrulama katmanıdır. Resmî yazı EBYS'ye gönderilmeden önce mevzuat uygunluğunu, yazışma formatını, eksik bilgi varlığını ve yazı ile mevzuat arasındaki çelişkileri denetler.
+
 ### 📋 Workflow State Veri Yapısı
 Sistem, ajanlar arasında veri tutarlılığını ve hata toleransını sağlamak için şu alanları anlık izler:
 * `Document ID`, `OCR Text`, `Document Type`, `Missing Fields`, `Risk Level`, `Legal References`, `Confidence Score`, `Generated Letter`, `Assigned Department`, `Approval Status`, `Current Agent / Step`.
