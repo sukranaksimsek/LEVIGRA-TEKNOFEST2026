@@ -14,24 +14,16 @@ LEGIVRA AI fikri, TEKNOFEST'in belirlediği *"Kamu Evrak ve Yazışma Süreçler
 ### 🚀 Takım Üyeleri ve Görev Dağılımı
 
 #### 👩‍✈️ Şükran Akşimşek (Takım Kaptanı)
-* **Arka Plan:** Endüstri Mühendisliği Bölüm Birincisi & Bilgisayar Mühendisliği ÇAP Öğrencisi | TÜBİTAK 2209-B Proje Yürütücüsü | TEKNOFEST 2022 - 2023 Efficiency Challenge Elektrikli Araç Yarışması Katılımcısı.
-* **Projedeki Görevi:** Proje koordinasyonu, sistem mimarisinin tasarımı ve **LangGraph Agent** iş akışlarının kurgulanması.
+**Projedeki Görevi:** Proje koordinasyonu, sistem mimarisinin tasarımı ve **LangGraph Agent** iş akışlarının kurgulanması.
 
 #### 💻 Sıla Çakmak (Ekip Üyesi)
-* **Arka Plan:** Bilgisayar Mühendisliği Fakülte ve Bölüm Birincisi | Çeşitli ulusal yarışma, teknoloji kampları ve araştırma projeleri katılımcısı.
-* **Projedeki Görevi:** **LLM** geliştirme, veri ön işleme hatlarının kurulması, backend, model entegrasyonu ve **Full-stack** uygulama geliştirme.
+**Projedeki Görevi:** **LLM** geliştirme, veri ön işleme hatlarının kurulması, backend, model entegrasyonu ve **Full-stack** uygulama geliştirme.
 
 #### 🗄️ İlknur Gençoğlu (Ekip Üyesi)
-* **Arka Plan:** Endüstri Mühendisliği Mezunu | Planlama Mühendisi | TEKNOFEST 2023 Efficiency Challenge Elektrikli Araç Yarışması Katılımcısı.
-* **Projedeki Görevi:** Mevzuat veri tabanı tasarımı, **RAG** sistem mimarisi, metin vektörleştirme (**Embedding**) süreçleri ve **PostgreSQL / pgvector** yönetimi.
+**Projedeki Görevi:** Mevzuat veri tabanı tasarımı, **RAG** sistem mimarisi, metin vektörleştirme (**Embedding**) süreçleri ve **PostgreSQL / pgvector** yönetimi.
 
 #### 👁️ Tuğba Nur Başkaya (Ekip Üyesi)
-* **Arka Plan:** Endüstri Mühendisliği Mezunu | TEKNOFEST 2023 - 2024 Efficiency Challenge Elektrikli & 2024 Robotaksi Binek Otonom Araç Yarışması Katılımcısı.
-* **Projedeki Görevi:** **OCR** entegrasyonu, belge işleme, belge sınıflandırma ve eksik bilgi/belge tespit ajanlarının geliştirilmesi.
-
-🔗 **[Miro Product Backlog Board](https://miro.com/)** *(Board linkinizi buraya ekleyebilirsiniz)*
-
----
+**Projedeki Görevi:** **OCR** entegrasyonu, belge işleme, belge sınıflandırma ve eksik bilgi/belge tespit ajanlarının geliştirilmesi.
 
 ## 🎯 Projenin Amacı ve Hedefleri
 
